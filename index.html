@@ -1,0 +1,48 @@
+<html>
+	<head>
+	<title>Even Odd App by Yash </title>
+
+	<style> * {font-size:60px;}
+		body {background-color:lightyellow;}
+	</style>
+
+
+	<script>
+		function evenodd(){
+			event.preventDefault();
+			let num = document.getElementById("num");
+			let ans = document.getElementById("ans");
+
+			if(num.value ==""){
+				alert("number is empty");
+				ans.innerHTML = "";
+				num.focus();
+				return;
+			}
+	
+			let n = parseInt(num.value);
+			let r = n % 2 == 0 ? "even" : "odd";
+			ans.innerHTML = r;
+	}
+			
+	</script>	
+	
+	
+	</head>
+	<body>
+	<center>
+		<h1>Even Odd Finder</h1>
+
+		<form onsubmit="evenodd()">
+		<input type="number" placeholder="Enter an Integer" id="num"/>
+		<br><br>
+		<input type="submit" value="Find"/>
+		</form>
+	
+		<h2 id="ans"> </h2>	
+
+	</center>
+	</body>
+
+
+</html>
